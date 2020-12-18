@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+a {
+    font-family: 'Space Grotesk', sans-serif !important;
+    text-decoration: none !important;
+}
+
+h5 {
+    color: black;
+}
+
+#my-sticky-navbar {
+    background-color: #7b47a5;
+}
+
+#my-navbar a {
+    color: #4d4c4c;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 5px;
+}
+
+#brandlogo {
+    height: auto;
+}
+
+#social-btn {
+    float: right;
+}
+
+.drop-btn .dropdown-content {
+    top: 2.8rem;
+    display: none;
+    position: absolute;
+    background-color: #f5f2f6fa;
+    width: 100%;
+    left: 0;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    transition: all 0.5s ease-in-out;
+    min-height: 35vh;
+    border-inline: 1px solid rgba(100, 96, 96, 0.479);
+}
+
+#social-btn>.dropdown-content {
+    left: 20%;
+    right: 0;
+    width: 80%;
+    min-height: 3rem;
+}
+
+.drop-btn:hover .dropdown-content {
+    display: block;
+}
+
+#characters-btn,
+#social-btn {
+    color: white;
+    transition: color 0.3s ease-in-out;
+}
+
+.drop-btn:hover {
+    color: rgb(14, 14, 14) !important;
+}
+
+#dropdown--branches div>a:hover,
+#dropdown--aboutme div>a:hover {
+    background-color: rgba(128, 128, 128, 0.26);
+}
+
+#dropdown--branches div>a {
+    color: #c73b3b;
+    float: left;
+    text-align: center;
+    padding: 14px;
+}
+
+#dropdown--aboutme .social-list {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 15px 0 0 0;
+    list-style-type: none;
+}
+
+#dropdown--aboutme .social-list {
+    width: auto;
+    height: auto;
+}
+
+#char-header p {
+    background: #7F00FF;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #e4108b, #8000ff94);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #e4108b, #8000ff94);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 30px;
+    font-weight: 800;
+    padding: 10px 0 0 20px;
+}
+
+#facebook a {
+    color: #0754b9;
+}
+
+#github a {
+    color: black;
+}
+
+#twitter a {
+    color: #0099ff;
+}
+
+#youtube a {
+    color: rgb(255, 0, 0);
+}
