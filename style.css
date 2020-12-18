@@ -123,3 +123,8 @@ h5 {
 #youtube a {
     color: rgb(255, 0, 0);
 }
+
+.fitted {
+    max-width: 100%;
+    height: auto;
+}
