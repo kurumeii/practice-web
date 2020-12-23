@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Langar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Space Grotesk', sans-serif;
     text-decoration: none !important;
 }
 
@@ -17,10 +17,30 @@ html {
 
 #my-navbar {
     min-height: 10vh;
-    position: sticky;
-    top: 0;
-    padding: 0 15px;
+    padding: 25px;
+    position: fixed;
+    width: 100%;
     background-color: transparent;
+    transition-duration: 0.5s;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+
+/* JS added transition to navbar */
+
+.navbar-scroll {
+    top: 0;
+    padding: 13px 15px;
+    background-color: rgb(39, 37, 37) !important;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4) !;
+}
+
+.navbar-scroll .menu li a {
+    color: white !important;
+}
+
+.navbar-scroll .menu li a:hover {
+    color: rgb(122, 39, 218) !important;
 }
 
 
@@ -51,6 +71,11 @@ html {
     letter-spacing: 3px;
     font-weight: 600;
     font-size: 18px;
+    transition-duration: 0.3s;
+}
+
+#my-navbar .menu li a:hover {
+    color: #463d46;
 }
 
 
@@ -62,14 +87,56 @@ html {
     display: none;
     right: 0;
     padding: 0 10px;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 928px) {
     #my-navbar .menu {
         width: 50%;
     }
+}
+
+
+/* Transition on click burger */
+
+@media screen and (max-width: 754px) {
+    body {
+        overflow-x: hidden;
+    }
+    #my-navbar .menu {
+        position: absolute;
+        right: 0;
+        top: 25vh;
+        height: 20vh;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        background-color: brown;
+    }
     #my-navbar .burgerMenu {
         display: flex;
+        right: 0;
+        padding: 0 10px;
+    }
+    #my-navbar .menu li {
+        opacity: 1;
+    }
+}
+
+.dropdown-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
     }
 }
 
@@ -81,9 +148,39 @@ html {
 }
 
 
-/* JS added transition to navbar */
+/* Section home */
 
-.navbar-scroll {
-    background-color: #3a3a3a !important;
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+.home {
+    display: flex;
+    background: url("/vendors/img/banner.png") no-repeat 10% 40%;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 75vh;
+    min-height: 500px;
+    color: #111111;
+    font-family: 'Merriweather', serif;
+}
+
+.home .container-fluid {
+    margin: auto 0 auto 20px;
+}
+
+.home .home-content .text1 {
+    font-size: 1.8rem;
+}
+
+.home .home-content .text2 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-left: 13px;
+}
+
+.home .home-content .text3 {
+    font-size: 20px;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.home .home-content .text3 span {
+    color: #dc143c;
 }
