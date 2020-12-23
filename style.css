@@ -8,6 +8,10 @@
     text-decoration: none !important;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 
 /* Navigation bar */
 
@@ -39,7 +43,7 @@
     display: flex;
     list-style: none;
     justify-content: space-around;
-    width: 30%;
+    width: 50%;
 }
 
 #my-navbar .menu li a {
@@ -47,6 +51,26 @@
     letter-spacing: 3px;
     font-weight: 600;
     font-size: 18px;
+}
+
+
+/* Burger menu */
+
+#my-navbar .burgerMenu {
+    font-size: 2.5rem;
+    position: absolute;
+    display: none;
+    right: 0;
+    padding: 0 10px;
+}
+
+@media screen and (max-width: 928px) {
+    #my-navbar .menu {
+        width: 50%;
+    }
+    #my-navbar .burgerMenu {
+        display: flex;
+    }
 }
 
 
