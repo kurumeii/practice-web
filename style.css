@@ -161,6 +161,15 @@ html {
     font-family: 'Merriweather', serif;
 }
 
+
+/* media for text in banner */
+
+@media screen and (max-width: 1265px) {
+    .home .home-content {
+        font-size: 20px;
+    }
+}
+
 .home .container-fluid {
     margin: auto 0 auto 20px;
 }

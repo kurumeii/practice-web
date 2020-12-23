@@ -1,10 +1,10 @@
 $(function () {
     const navbar = $('#my-navbar');
     $(window).on('scroll', () => {
-        if ($(window).scrollTop() <= 150) {
-            navbar.removeClass('navbar-scroll');
+        if ($(window).scrollTop() > 90) {
+            navbar.addClass('navbar-scroll');
         } else {
-            navbar.addClass('navbar-scroll')
+            navbar.removeClass('navbar-scroll')
         }
     });
 });
