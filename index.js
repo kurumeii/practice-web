@@ -7,16 +7,25 @@ $(function () {
             navbar.removeClass('navbar-scroll')
         }
     });
+    navSlide();
 });
-    //function transition
+//function transition
 
-const navSlide = () =>{
-    const $burger = $('.burgerMenu');
-    const $nav = $('.menu');
-
-    $burger.on('click', () =>{
-        $nav.toggleClass('dropdown-active');
+const navSlide = () => {
+    const $menu = $('#my-navbar .menu');
+    $('.burgerMenu').on('click', function(){
+        //Change color of the burger menu when clicked
+        $menu.toggleClass('dropdown-active');
+        $(this).attr("style", () =>{
+            const $this = $(this).attr("style");
+            if($this!== "color: white" || $this == ""){
+                $(this).attr("style", "color: white");
+            } else{
+                $(this).removeAttr("style");
+            }
+        });
+        //change icon burger
+        $('.burgerMenu i').toggleClass('active');
     })
 };
 
-navSlide();

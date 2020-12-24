@@ -17,11 +17,11 @@ html {
 
 #my-navbar {
     min-height: 10vh;
-    padding: 25px;
+    padding: 15px 15px;
     position: fixed;
     width: 100%;
     background-color: transparent;
-    transition-duration: 0.5s;
+    transition: all 0.5s ease;
     font-family: 'Space Grotesk', sans-serif;
 }
 
@@ -30,12 +30,13 @@ html {
 
 .navbar-scroll {
     top: 0;
-    padding: 13px 15px;
+    padding: 25px 40px !important;
     background-color: rgb(39, 37, 37) !important;
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4) !;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4) !important;
 }
 
-.navbar-scroll .menu li a {
+.navbar-scroll .menu li a,
+.navbar-scroll #brandLogo {
     color: white !important;
 }
 
@@ -50,6 +51,9 @@ html {
     font-family: 'Langar', cursive;
     font-size: 2.5em;
     font-style: italic;
+}
+
+#my-navbar #brandLogo span {
     background: linear-gradient(to right, rgb(122, 39, 218), crimson);
     -webkit-background-clip: text;
     background-clip: text;
@@ -90,7 +94,11 @@ html {
     cursor: pointer;
 }
 
-@media screen and (max-width: 928px) {
+.navbar-scroll .burgerMenu {
+    color: #ffffff;
+}
+
+@media screen and (max-width: 1053px) {
     #my-navbar .menu {
         width: 50%;
     }
@@ -99,44 +107,39 @@ html {
 
 /* Transition on click burger */
 
-@media screen and (max-width: 754px) {
-    body {
-        overflow-x: hidden;
-    }
+@media screen and (max-width: 1053px) {
     #my-navbar .menu {
+        width: 100%;
         position: absolute;
         right: 0;
-        top: 25vh;
-        height: 20vh;
+        top: 0;
+        height: 55vh;
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in-out;
-        background-color: brown;
+        align-items: center;
+        justify-content: space-around;
+        transition: all 0.3s ease-in-out;
+        background-color: #111111;
+        z-index: 5000;
+        transform: translateY(-100%);
     }
     #my-navbar .burgerMenu {
+        z-index: 5000;
         display: flex;
         right: 0;
-        padding: 0 10px;
+        padding: 0 30px;
+        transition: all 0.5s ease;
     }
-    #my-navbar .menu li {
-        opacity: 1;
+    #my-navbar .dropdown-active {
+        transform: translateY(0%);
     }
-}
-
-.dropdown-active {
-    transform: translateX(0%);
-}
-
-@keyframes navLinkFade {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
+    #my-navbar .burgerMenu i.active,
+    #my-navbar .burgerMenu i {
+        font-weight: 700;
+        font-size: 2.5rem;
     }
-    to {
-        opacity: 1;
-        transform: translateX(0px);
+    #my-navbar .burgerMenu i.active:before {
+        content: "\⛌";
     }
 }
 
@@ -148,7 +151,10 @@ html {
 }
 
 
-/* Section home */
+/* ---------------------------------------------- */
+
+
+/* Home section */
 
 .home {
     display: flex;
@@ -161,35 +167,76 @@ html {
     font-family: 'Merriweather', serif;
 }
 
+.home .container-fluid {
+    margin: auto 0 auto 20px;
+    transition: all 0.5s ease;
+}
 
-/* media for text in banner */
 
-@media screen and (max-width: 1265px) {
-    .home .home-content {
-        font-size: 20px;
+/* Responsive banner */
+
+@media screen and (max-width: 1053px) {
+    .home {
+        background-size: 70%;
+        background-position: center right;
+        height: 55vh;
+    }
+    /* .home .container-fluid {
+        transform: translateY(+50%);
+    } */
+}
+
+@media screen and (max-width: 414px) {
+    .home {
+        background: url('./vendors/img/test.png') no-repeat center;
+        background-attachment: fixed;
+        background-size: 150%;
+    }
+    .home .home-content .text {
+        display: none;
     }
 }
 
-.home .container-fluid {
-    margin: auto 0 auto 20px;
+.home .home-content .text {
+    margin: 15px 0 0 10px;
+    font-size: 2rem;
 }
 
-.home .home-content .text1 {
+.home .home-content span {
+    background: linear-gradient(to right, #a8c0ff, #3f2b96);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.home .home-content #text-1 {
     font-size: 1.8rem;
 }
 
-.home .home-content .text2 {
+.home .home-content #text-2 {
     font-size: 3rem;
-    font-weight: 600;
+    font-weight: 500;
     margin-left: 13px;
 }
 
-.home .home-content .text3 {
+.home .home-content #text-3 {
     font-size: 20px;
     font-weight: 200;
     font-style: italic;
 }
 
-.home .home-content .text3 span {
-    color: #dc143c;
+
+/* ---------------------------------------- */
+
+
+/* About section */
+
+.about .title {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
 }
