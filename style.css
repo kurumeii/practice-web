@@ -252,21 +252,27 @@ html {
 
 /* Card custom css */
 
-#aboutCard--row #aboutCard--img {
+#aboutCard--img {
     display: flex;
     position: relative;
-    align-content: center;
+    align-items: center;
 }
 
-#aboutCard--row .para {
+@media screen and (max-width: 768px) {
+    #aboutCard--img {
+        display: contents;
+    }
+}
+
+#aboutCard--body .para {
     font-size: 1.3rem;
 }
 
-#aboutCard--row .para i {
+#aboutCard--body .para i {
     color: teal;
 }
 
-#aboutCard--row .para span {
+#aboutCard--body .para span {
     background: linear-gradient(to right, #642b73, #c6426e);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-clip: text;
@@ -275,6 +281,34 @@ html {
     font-weight: 600;
 }
 
-#aboutCard--row #para-first ol {
+#aboutCard--body #para-first ol {
     margin: 0 15px;
+}
+
+
+/* Quote */
+
+.quote {
+    margin: 0;
+    background: #eee;
+    padding: 5px 1em;
+    border-radius: 1em;
+    font-style: italic;
+}
+
+.quote figcaption,
+.quote blockquote {
+    margin: 1em;
+}
+
+
+/* Grid image gallery */
+
+.about-content #my-work--row .row {
+    padding: 2rem;
+}
+
+.about-content #my-work--row img {
+    margin-top: 8px;
+    width: 100%;
 }
