@@ -264,6 +264,14 @@ html {
     }
 }
 
+#aboutCard--body,
+#aboutCard--body .card-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    float: left;
+}
+
 #aboutCard--body .para {
     font-size: 1.3rem;
 }
