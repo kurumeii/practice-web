@@ -1,0 +1,130 @@
+/* Navigation bar */
+
+#my-navbar {
+    min-height: 10vh;
+    padding: 15px 15px;
+    position: fixed;
+    width: 100%;
+    background-color: transparent;
+    transition: all 0.5s ease;
+    font-family: 'Space Grotesk', sans-serif;
+    z-index: 9999;
+}
+
+
+/* JS added transition to navbar */
+
+.navbar-scroll {
+    top: 0;
+    padding: 25px 40px !important;
+    background-color: rgb(39, 37, 37) !important;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4) !important;
+}
+
+.navbar-scroll .menu li a,
+.navbar-scroll #brandLogo {
+    color: white !important;
+}
+
+.navbar-scroll .menu li a:hover {
+    color: rgb(122, 39, 218) !important;
+}
+
+
+/* Brand logo */
+
+#my-navbar #brandLogo {
+    font-family: 'Langar', cursive;
+    font-size: 2.5em;
+    font-style: italic;
+}
+
+#my-navbar #brandLogo span {
+    background: linear-gradient(to right, rgb(122, 39, 218), crimson);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* menu list item */
+
+#my-navbar .menu {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    width: 50%;
+}
+
+#my-navbar .menu li a {
+    color: #ad3434;
+    letter-spacing: 3px;
+    font-weight: 600;
+    font-size: 18px;
+    transition-duration: 0.3s;
+}
+
+#my-navbar .menu li a:hover {
+    color: #463d46;
+}
+
+
+/* Burger menu */
+
+#my-navbar .burgerMenu {
+    font-size: 2.5rem;
+    position: absolute;
+    display: none;
+    right: 0;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.navbar-scroll .burgerMenu {
+    color: #ffffff;
+}
+
+@media screen and (max-width: 1053px) {
+    #my-navbar .menu {
+        width: 50%;
+    }
+}
+
+
+/* Transition on click burger */
+
+@media screen and (max-width: 1053px) {
+    #my-navbar .menu {
+        width: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 55vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transition: all 0.3s ease-in-out;
+        background-color: #111111;
+        z-index: 5000;
+        transform: translateY(-100%);
+    }
+    #my-navbar .burgerMenu {
+        z-index: 5000;
+        display: flex;
+        right: 0;
+        padding: 0 30px;
+        transition: all 0.5s ease;
+    }
+    #my-navbar .dropdown-active {
+        transform: translateY(0%);
+    }
+    #my-navbar .burgerMenu i.active,
+    #my-navbar .burgerMenu i {
+        font-weight: 700;
+        font-size: 2.5rem;
+    }
+    #my-navbar .burgerMenu i.active:before {
+        content: "\⛌";
+    }
+}

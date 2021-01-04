@@ -1,0 +1,56 @@
+/* Card custom css */
+
+#aboutCard--img {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    #aboutCard--img {
+        display: contents;
+    }
+}
+
+#aboutCard--body,
+#aboutCard--body .card-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    float: left;
+}
+
+#aboutCard--body .para {
+    font-size: 1.3rem;
+}
+
+#aboutCard--body .para i {
+    color: teal;
+}
+
+#aboutCard--body .para span {
+    background: linear-gradient(to right, #642b73, #c6426e);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+}
+
+#aboutCard--body #para-first ol {
+    margin: 0 15px;
+}
+
+
+/* Effect on scroll */
+
+.card-text {
+    opacity: 0;
+    transform: translateX(120px);
+    transition: all 2s ease;
+}
+
+.appear {
+    opacity: 1;
+    transform: translateX(0px);
+}
