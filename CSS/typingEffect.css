@@ -1,0 +1,28 @@
+/* Typing effect */
+
+.typing-effect {
+    background: linear-gradient(to right, #a8c0ff, #3f2b96);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.home .home-content span.cursor {
+    display: inline-flex;
+    align-items: center;
+    width: 2px;
+    height: 25px;
+    background-color: #642b73;
+    margin-left: 0.1rem;
+    animation: blink 0.75s infinite;
+}
+
+@keyframes blink {
+    50% {
+        background-color: transparent;
+    }
+}
+
+
+/* ------------------ */
