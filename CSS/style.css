@@ -88,6 +88,21 @@ html {
 }
 
 
+/* Effect text smooth */
+
+.card-text,
+.card-img {
+    opacity: 0;
+    transform: translateX(120px);
+    transition: all 1s ease;
+}
+
+.appear {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+
 /* ---------------------------------------- */
 
 
@@ -126,13 +141,19 @@ html {
 }
 
 
+/* -------------------------- */
+
+
+/* Skills section */
+
+
 /* Grid image gallery */
 
-.about-content #my-work--row .row {
+.skill-content #my-work--row .row {
     padding: 2rem;
 }
 
-.about-content #my-work--row img {
+.skill-content #my-work--row img {
     margin-top: 8px;
     width: 100%;
 }
