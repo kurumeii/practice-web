@@ -30,20 +30,20 @@ $(function() {
             $rowPosition.classList.remove('appear');
         }
     });
-    navSlide();
+    navStyle();
     typingEffect();
 });
 
 //function transition
 
-const navSlide = () => {
+const navStyle = () => {
     const $menu = $('#my-navbar .menu');
     $('.burgerMenu').on('click', function() {
         //Change color of the burger menu when clicked
         $menu.toggleClass('dropdown-active');
         $(this).attr("style", () => {
-            const $this = $(this).attr("style");
-            if ($this !== "color: white" || $this == "") {
+            const $styleState = $(this).attr("style");
+            if ($styleState !== "color: white" || $styleState == "") {
                 $(this).attr("style", "color: white");
             } else {
                 $(this).removeAttr("style");

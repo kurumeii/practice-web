@@ -30,7 +30,7 @@ html {
     background: url("/vendors/img/banner.png") no-repeat 10% 40%;
     background-attachment: fixed;
     background-size: cover;
-    height: 75vh;
+    height: 100vh;
     min-height: 500px;
     color: #111111;
     font-family: 'Merriweather', serif;
@@ -114,12 +114,9 @@ html {
 }
 
 .about .title {
-    position: relative;
     padding: 30px 0;
     /* margin: 30px 0; */
-    display: flex;
-    justify-content: center;
-    align-content: center;
+    text-align: center;
     font-weight: 700;
     font-style: italic;
 }
@@ -148,6 +145,11 @@ html {
 
 
 /* Grid image gallery */
+
+.skill-content .title {
+    margin: 50px 0;
+    text-align: center;
+}
 
 .skill-content #my-work--row .row {
     padding: 2rem;
