@@ -11,7 +11,7 @@ $(function() {
         const $screenPosition = window.innerHeight / 2; //Get position of the half-screen of viewpoint  
         const $txt = document.querySelector('.card-text');
         const $img = $('.card-img');
-        const $sliderow = document.querySelector('#my-work--row');
+
 
         // about me
         const $txtPosition = $txt.getBoundingClientRect().top; //Get position of the text regardless of the screen
@@ -22,13 +22,7 @@ $(function() {
             $txt.classList.remove('appear');
             $img.removeClass('appear');
         }
-        // my work
-        const $rowPosition = $sliderow.getBoundingClientRect().top;
-        if ($rowPosition < $screenPosition) {
-            $sliderow.classList.add('appear')
-        } else if ($rowPosition) {
-            $rowPosition.classList.remove('appear');
-        }
+
     });
     navStyle();
     typingEffect();
@@ -82,7 +76,7 @@ const typingEffect = () => {
     setTimeout(typingEffect, 300);
 }
 $('#carouselFade').carousel({
-    interval: 4000
+    interval: 10000
 });
 $('.next').on('click', () => {
     $('#carouselFade').carousel("next");
