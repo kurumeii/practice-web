@@ -32,6 +32,7 @@ $(function() {
     });
     navStyle();
     typingEffect();
+
 });
 
 //function transition
@@ -80,3 +81,12 @@ const typingEffect = () => {
     }
     setTimeout(typingEffect, 300);
 }
+$('#carouselFade').carousel({
+    interval: 4000
+});
+$('.next').on('click', () => {
+    $('#carouselFade').carousel("next");
+})
+$('.prev').on('click', () => {
+    $('#carouselFade').carousel("prev");
+})

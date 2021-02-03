@@ -12,11 +12,16 @@ html {
     scroll-behavior: smooth;
 }
 
-
-/* Upper case */
-
 .upper-case {
     text-transform: uppercase;
+}
+
+.divider {
+    position: relative;
+    width: 50%;
+    height: 0;
+    border: 2px solid indigo;
+    display: inline-flex;
 }
 
 
@@ -151,11 +156,6 @@ html {
     text-align: center;
 }
 
-.skill-content #my-work--row .row {
-    padding: 2rem;
-}
-
-.skill-content #my-work--row img {
-    margin-top: 8px;
-    width: 100%;
+.carousel-inner>.carousel-item>img {
+    margin: auto;
 }
